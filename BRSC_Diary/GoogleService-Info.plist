@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>449023242099-psa8cpkqtbih2c7bmtsog9rjq8ddefd3.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.449023242099-psa8cpkqtbih2c7bmtsog9rjq8ddefd3</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>449023242099-df21set6iht3vu7sp5o396hggid9ftrv.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD3dfzM9c0XRQxo6lXPuoCoc2Q5wzZXEXU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>449023242099</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>ru.nitronapps.BRSCDiary</string>
+	<key>PROJECT_ID</key>
+	<string>diary-3c7a5</string>
+	<key>STORAGE_BUCKET</key>
+	<string>diary-3c7a5.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:449023242099:ios:fb664152b40b285b2e9f06</string>
+	<key>DATABASE_URL</key>
+	<string>https://diary-3c7a5.firebaseio.com</string>
+</dict>
+</plist>

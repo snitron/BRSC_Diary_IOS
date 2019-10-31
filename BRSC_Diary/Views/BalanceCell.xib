@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SegoeUI-Bold.ttf">
+            <string>SegoeUI-Bold</string>
+        </array>
+        <array key="segoe-ui.ttf">
+            <string>SegoeUI-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="164" id="B4V-Jv-s1g" customClass="BalanceCellController" customModule="BRSC_Diary" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="587" height="164"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B4V-Jv-s1g" id="fBW-Ba-BqW">
+                <rect key="frame" x="0.0" y="0.0" width="587" height="164"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q4T-yK-dZ7">
+                        <rect key="frame" x="2" y="2" width="583" height="160"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GXs-Rn-gns">
+                                <rect key="frame" x="5" y="5" width="573" height="150"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tld-1P-kjK">
+                                        <rect key="frame" x="0.0" y="0.0" width="184.5" height="150"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Light" family="Segoe UI" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0x6-H6-HM3">
+                                        <rect key="frame" x="194.5" y="0.0" width="184" height="150"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Light" family="Segoe UI" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ztz-8S-Fyz">
+                                        <rect key="frame" x="388.5" y="0.0" width="184.5" height="150"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="0x6-H6-HM3" firstAttribute="width" secondItem="Ztz-8S-Fyz" secondAttribute="width" id="v9f-AW-VtC"/>
+                                    <constraint firstItem="tld-1P-kjK" firstAttribute="width" secondItem="0x6-H6-HM3" secondAttribute="width" id="xi2-pa-Lgv"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="GXs-Rn-gns" firstAttribute="top" secondItem="q4T-yK-dZ7" secondAttribute="top" constant="5" id="BrP-5P-2uA"/>
+                            <constraint firstItem="GXs-Rn-gns" firstAttribute="leading" secondItem="q4T-yK-dZ7" secondAttribute="leading" constant="5" id="Xhf-ki-8eL"/>
+                            <constraint firstAttribute="trailing" secondItem="GXs-Rn-gns" secondAttribute="trailing" constant="5" id="Z0C-BG-GYF"/>
+                            <constraint firstAttribute="bottom" secondItem="GXs-Rn-gns" secondAttribute="bottom" constant="5" id="vOc-ax-fbu"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="q4T-yK-dZ7" secondAttribute="trailing" constant="2" id="X6Y-AZ-PWI"/>
+                    <constraint firstItem="q4T-yK-dZ7" firstAttribute="top" secondItem="fBW-Ba-BqW" secondAttribute="top" constant="2" id="YDM-nZ-z1y"/>
+                    <constraint firstItem="q4T-yK-dZ7" firstAttribute="leading" secondItem="fBW-Ba-BqW" secondAttribute="leading" constant="2" id="gxb-kJ-VQe"/>
+                    <constraint firstAttribute="bottom" secondItem="q4T-yK-dZ7" secondAttribute="bottom" constant="2" id="wgH-Od-cqv"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="billBalance" destination="Ztz-8S-Fyz" id="b6i-dJ-P17"/>
+                <outlet property="billName" destination="tld-1P-kjK" id="6I6-q7-56K"/>
+                <outlet property="billNumber" destination="0x6-H6-HM3" id="hWy-Pf-pe8"/>
+                <outlet property="mainView" destination="q4T-yK-dZ7" id="4Sq-oN-W5k"/>
+                <outlet property="stackView" destination="GXs-Rn-gns" id="cfy-sO-QYV"/>
+            </connections>
+            <point key="canvasLocation" x="121.0144927536232" y="207.58928571428569"/>
+        </tableViewCell>
+    </objects>
+</document>

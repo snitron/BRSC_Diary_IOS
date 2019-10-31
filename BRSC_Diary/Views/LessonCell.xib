@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SegoeUI.ttf">
+            <string>SegoeUI</string>
+        </array>
+        <array key="segoe-ui.ttf">
+            <string>SegoeUI-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Czo-P7-ab9" customClass="LessonCellController" customModule="BRSC_Diary" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="znJ-gw-mAn">
+                    <rect key="frame" x="0.0" y="46.5" width="414" height="813"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zy8-qR-t8W">
+                            <rect key="frame" x="10" y="15" width="15" height="783"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="15" id="qVJ-WB-Jgf"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SegoeUI-Light" family="Segoe UI" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dpZ-L0-exV">
+                            <rect key="frame" x="35" y="15" width="309" height="783"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Физика" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IpA-YH-M5q">
+                                    <rect key="frame" x="0.0" y="76" width="60" height="20.5"/>
+                                    <fontDescription key="fontDescription" name="SegoeUI-Light" family="Segoe UI" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <size key="shadowOffset" width="0.0" height="0.0"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Кирик 1, 2, 3, 4        Степанова 5, 6, 7, 8 НА ЛИСТОЧКАХ!!!!!!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="duI-PS-ncF">
+                                    <rect key="frame" x="-19" y="324" width="472.5" height="20.5"/>
+                                    <fontDescription key="fontDescription" name="SegoeUI-Light" family="Segoe UI" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="IpA-YH-M5q" firstAttribute="leading" secondItem="dpZ-L0-exV" secondAttribute="leading" id="Kdx-If-rMq"/>
+                                <constraint firstAttribute="trailing" secondItem="duI-PS-ncF" secondAttribute="trailing" id="Lfz-Dp-uRQ"/>
+                                <constraint firstItem="IpA-YH-M5q" firstAttribute="top" secondItem="dpZ-L0-exV" secondAttribute="top" id="M0J-M3-kg2"/>
+                                <constraint firstItem="IpA-YH-M5q" firstAttribute="width" secondItem="duI-PS-ncF" secondAttribute="width" id="SaK-yf-Gfd"/>
+                                <constraint firstItem="duI-PS-ncF" firstAttribute="leading" secondItem="IpA-YH-M5q" secondAttribute="trailing" constant="5" id="ZHG-cJ-YYr"/>
+                                <constraint firstItem="duI-PS-ncF" firstAttribute="top" secondItem="dpZ-L0-exV" secondAttribute="top" id="haS-XR-Sk5"/>
+                                <constraint firstAttribute="bottom" secondItem="IpA-YH-M5q" secondAttribute="bottom" id="hgD-m0-Dn8"/>
+                                <constraint firstItem="duI-PS-ncF" firstAttribute="centerY" secondItem="dpZ-L0-exV" secondAttribute="centerY" id="hkv-lx-AvW"/>
+                                <constraint firstItem="IpA-YH-M5q" firstAttribute="centerY" secondItem="dpZ-L0-exV" secondAttribute="centerY" id="jJh-Af-rZI"/>
+                                <constraint firstAttribute="bottom" secondItem="duI-PS-ncF" secondAttribute="bottom" id="x7I-qx-P0S"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RyE-aY-gF8">
+                            <rect key="frame" x="349" y="15" width="50" height="783"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="uqp-tP-kEy"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                            <state key="normal" title="5/5 (i)">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="onMarkButtonTouch:" destination="Czo-P7-ab9" eventType="touchUpInside" id="Eu9-kP-lgt"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="dpZ-L0-exV" firstAttribute="top" secondItem="znJ-gw-mAn" secondAttribute="top" constant="15" id="1zX-mJ-NUL"/>
+                        <constraint firstAttribute="trailing" secondItem="RyE-aY-gF8" secondAttribute="trailing" constant="15" id="9Ci-H8-lt1"/>
+                        <constraint firstItem="zy8-qR-t8W" firstAttribute="top" secondItem="znJ-gw-mAn" secondAttribute="top" constant="15" id="H3z-sa-9FY"/>
+                        <constraint firstAttribute="bottom" secondItem="dpZ-L0-exV" secondAttribute="bottom" constant="15" id="Lf1-qQ-K5S"/>
+                        <constraint firstItem="zy8-qR-t8W" firstAttribute="leading" secondItem="znJ-gw-mAn" secondAttribute="leading" constant="10" id="NfG-I6-hDd"/>
+                        <constraint firstItem="RyE-aY-gF8" firstAttribute="top" secondItem="znJ-gw-mAn" secondAttribute="top" constant="15" id="Ov7-cn-eIA"/>
+                        <constraint firstItem="dpZ-L0-exV" firstAttribute="leading" secondItem="zy8-qR-t8W" secondAttribute="trailing" constant="10" id="XkL-ah-Lyq"/>
+                        <constraint firstItem="RyE-aY-gF8" firstAttribute="leading" secondItem="dpZ-L0-exV" secondAttribute="trailing" priority="800" constant="5" id="Y24-IN-aLR"/>
+                        <constraint firstAttribute="bottom" secondItem="RyE-aY-gF8" secondAttribute="bottom" constant="15" id="og5-QR-WyN"/>
+                        <constraint firstAttribute="bottom" secondItem="zy8-qR-t8W" secondAttribute="bottom" constant="15" id="pVn-Vt-gKF"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="znJ-gw-mAn" firstAttribute="leading" secondItem="f4v-Xs-6qa" secondAttribute="leading" id="HIB-yn-coC"/>
+                <constraint firstItem="znJ-gw-mAn" firstAttribute="trailing" secondItem="f4v-Xs-6qa" secondAttribute="trailing" id="Io3-xT-BdX"/>
+                <constraint firstItem="f4v-Xs-6qa" firstAttribute="bottom" secondItem="znJ-gw-mAn" secondAttribute="bottom" constant="2.5" id="UIM-qv-lF7"/>
+                <constraint firstItem="znJ-gw-mAn" firstAttribute="top" secondItem="f4v-Xs-6qa" secondAttribute="top" constant="2.5" id="ops-9e-Lv4"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="f4v-Xs-6qa"/>
+            <connections>
+                <outlet property="count" destination="zy8-qR-t8W" id="Ky8-Ac-fAo"/>
+                <outlet property="homework" destination="duI-PS-ncF" id="Kh6-EP-pTi"/>
+                <outlet property="lesson" destination="IpA-YH-M5q" id="Q16-Mk-rz5"/>
+                <outlet property="mainView" destination="znJ-gw-mAn" id="Xs3-ew-Nob"/>
+                <outlet property="mark" destination="RyE-aY-gF8" id="QUp-91-ACE"/>
+            </connections>
+            <point key="canvasLocation" x="860.86956521739137" y="122.54464285714285"/>
+        </view>
+    </objects>
+</document>

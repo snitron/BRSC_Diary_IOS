@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="segoe-ui.ttf">
+            <string>SegoeUI-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="208" id="yXH-jd-Kg8" customClass="InfoCellController" customModule="BRSC_Diary" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="648" height="208"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yXH-jd-Kg8" id="7X4-2d-GlS">
+                <rect key="frame" x="0.0" y="0.0" width="648" height="208"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mxu-x6-LI8">
+                        <rect key="frame" x="2" y="2" width="644" height="204"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="td2-HN-8Z1">
+                                <rect key="frame" x="5" y="5" width="634" height="194"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68o-QW-XNE">
+                                        <rect key="frame" x="0.0" y="0.0" width="312" height="194"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Light" family="Segoe UI" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZG-PI-iXc">
+                                        <rect key="frame" x="322" y="0.0" width="312" height="194"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Light" family="Segoe UI" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="68o-QW-XNE" firstAttribute="width" secondItem="FZG-PI-iXc" secondAttribute="width" id="X9s-wi-Tlq"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="td2-HN-8Z1" firstAttribute="top" secondItem="Mxu-x6-LI8" secondAttribute="top" constant="5" id="25Y-5S-wgD"/>
+                            <constraint firstAttribute="trailing" secondItem="td2-HN-8Z1" secondAttribute="trailing" constant="5" id="6nR-Dv-A3k"/>
+                            <constraint firstAttribute="bottom" secondItem="td2-HN-8Z1" secondAttribute="bottom" constant="5" id="WSx-LT-C3T"/>
+                            <constraint firstItem="td2-HN-8Z1" firstAttribute="leading" secondItem="Mxu-x6-LI8" secondAttribute="leading" constant="5" id="xNL-Vf-fdd"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Mxu-x6-LI8" firstAttribute="top" secondItem="7X4-2d-GlS" secondAttribute="top" constant="2" id="4nF-pM-rKs"/>
+                    <constraint firstAttribute="bottom" secondItem="Mxu-x6-LI8" secondAttribute="bottom" constant="2" id="XnD-FJ-OQb"/>
+                    <constraint firstItem="Mxu-x6-LI8" firstAttribute="leading" secondItem="7X4-2d-GlS" secondAttribute="leading" constant="2" id="ZxQ-Lv-zbc"/>
+                    <constraint firstAttribute="trailing" secondItem="Mxu-x6-LI8" secondAttribute="trailing" constant="2" id="yZ6-Lf-K5E"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="label" destination="68o-QW-XNE" id="qqW-xX-EaM"/>
+                <outlet property="mainView" destination="Mxu-x6-LI8" id="MSx-KM-yh0"/>
+                <outlet property="stackView" destination="td2-HN-8Z1" id="snA-lX-dlF"/>
+                <outlet property="value" destination="FZG-PI-iXc" id="tWo-Dp-8Lc"/>
+            </connections>
+            <point key="canvasLocation" x="-50.724637681159422" y="173.4375"/>
+        </tableViewCell>
+    </objects>
+</document>

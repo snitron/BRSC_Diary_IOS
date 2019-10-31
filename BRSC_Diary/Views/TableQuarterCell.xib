@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SegoeUI-Bold.ttf">
+            <string>SegoeUI-Bold</string>
+        </array>
+        <array key="segoe-ui.ttf">
+            <string>SegoeUI-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="89" id="q6s-O1-3IM" customClass="TableQuarterCell" customModule="BRSC_Diary" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="853" height="89"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q6s-O1-3IM" id="U8F-SM-lBW">
+                <rect key="frame" x="0.0" y="0.0" width="853" height="89"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F5q-ia-5zs">
+                        <rect key="frame" x="5" y="5" width="843" height="79"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mR7-Ly-wIG">
+                                <rect key="frame" x="10" y="0.0" width="60" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Mki-5B-b7W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OuF-oi-X7u">
+                                <rect key="frame" x="768" y="0.0" width="60" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="BAh-Qw-qXG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SegoeUI-Light" family="Segoe UI" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0bV-a7-rGI">
+                                <rect key="frame" x="70" y="0.0" width="698" height="79"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="55555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5GF-LR-NXy">
+                                        <rect key="frame" x="0.0" y="0.0" width="698" height="79"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Light" family="Segoe UI" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="5GF-LR-NXy" firstAttribute="leading" secondItem="0bV-a7-rGI" secondAttribute="leading" id="Mwz-us-25L"/>
+                                    <constraint firstItem="5GF-LR-NXy" firstAttribute="centerY" secondItem="0bV-a7-rGI" secondAttribute="centerY" id="Ngg-a3-PZW"/>
+                                    <constraint firstAttribute="trailing" secondItem="5GF-LR-NXy" secondAttribute="trailing" id="lZx-ph-pW5"/>
+                                    <constraint firstItem="5GF-LR-NXy" firstAttribute="top" secondItem="0bV-a7-rGI" secondAttribute="top" id="vun-bC-ozo"/>
+                                    <constraint firstAttribute="bottom" secondItem="5GF-LR-NXy" secondAttribute="bottom" id="yC7-6v-P0b"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="0bV-a7-rGI" secondAttribute="bottom" id="B3p-1v-2Km"/>
+                            <constraint firstItem="mR7-Ly-wIG" firstAttribute="leading" secondItem="F5q-ia-5zs" secondAttribute="leading" constant="10" id="BY5-tH-zHz"/>
+                            <constraint firstItem="OuF-oi-X7u" firstAttribute="top" secondItem="F5q-ia-5zs" secondAttribute="top" id="JIO-TK-L0K"/>
+                            <constraint firstAttribute="bottom" secondItem="OuF-oi-X7u" secondAttribute="bottom" id="NUI-gj-0My"/>
+                            <constraint firstItem="mR7-Ly-wIG" firstAttribute="top" secondItem="F5q-ia-5zs" secondAttribute="top" id="R3h-rG-hdu"/>
+                            <constraint firstItem="OuF-oi-X7u" firstAttribute="leading" secondItem="0bV-a7-rGI" secondAttribute="trailing" id="hk8-Ve-8kh"/>
+                            <constraint firstAttribute="trailing" secondItem="OuF-oi-X7u" secondAttribute="trailing" constant="15" id="kn1-Th-qn3"/>
+                            <constraint firstItem="0bV-a7-rGI" firstAttribute="leading" secondItem="mR7-Ly-wIG" secondAttribute="trailing" id="nbN-Xm-vQh"/>
+                            <constraint firstAttribute="bottom" secondItem="mR7-Ly-wIG" secondAttribute="bottom" id="wli-s6-b6J"/>
+                            <constraint firstItem="0bV-a7-rGI" firstAttribute="top" secondItem="F5q-ia-5zs" secondAttribute="top" id="zmZ-h2-0cR"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="F5q-ia-5zs" firstAttribute="leading" secondItem="U8F-SM-lBW" secondAttribute="leading" constant="5" id="jJJ-Ck-Lm1"/>
+                    <constraint firstAttribute="bottom" secondItem="F5q-ia-5zs" secondAttribute="bottom" constant="5" id="r7E-Gz-HPK"/>
+                    <constraint firstItem="F5q-ia-5zs" firstAttribute="top" secondItem="U8F-SM-lBW" secondAttribute="top" constant="5" id="xuP-mS-ACw"/>
+                    <constraint firstAttribute="trailing" secondItem="F5q-ia-5zs" secondAttribute="trailing" constant="5" id="zWy-Sb-UDw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="average" destination="OuF-oi-X7u" id="YuS-nj-wjy"/>
+                <outlet property="mainView" destination="F5q-ia-5zs" id="LrQ-5V-3m8"/>
+                <outlet property="marks" destination="5GF-LR-NXy" id="ZPG-Cq-RKA"/>
+                <outlet property="name" destination="mR7-Ly-wIG" id="Ab9-3T-ZBe"/>
+            </connections>
+            <point key="canvasLocation" x="-422.46376811594206" y="-78.683035714285708"/>
+        </tableViewCell>
+    </objects>
+</document>
