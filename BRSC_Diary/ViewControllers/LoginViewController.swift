@@ -61,8 +61,6 @@ class LoginViewController: UIViewController{
             
             loginEditText.isEnabled = false
             passwordEditText.isEnabled = false
-        
-         //   Alamofire.Session.default.session.invalidateAndCancel()
 
             API.login.get(login: loginEditText.text!.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? "", password: passwordEditText.text!.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? "").responseJSON(completionHandler: {response in
             do {
@@ -105,7 +103,7 @@ class LoginViewController: UIViewController{
                 (sender as! UIButton).isHidden = false
                 
                 DispatchQueue.main.async {
-                    if let viewController = self.storyboard?.instantiateViewController(identifier: "ViewController") as? ViewController {
+                    if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as? ViewController {
                                       viewController.modalPresentationStyle = .fullScreen
                                       self.present(viewController, animated: true, completion: nil)
                                   }

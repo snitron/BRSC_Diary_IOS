@@ -39,8 +39,6 @@ class TableViewController: UIViewController {
         progressBar.startAnimating()
         let user = try! JSONDecoder().decode(Array<UserInfo>.self, from: keychain.get("ids")!.data(using: .utf8)!)[settings.integer(forKey: "prefId")]
 
-   //     Alamofire.Session.default.session.invalidateAndCancel()
-
               API.table.get(login: keychain.get("login")!, password: keychain.get("password")!, id: user.userId!, rooId: user.rooId!, departmentId: user.departmentId!, instituteId: user.instituteId!).responseJSON(completionHandler: {
                   response in
                   do {

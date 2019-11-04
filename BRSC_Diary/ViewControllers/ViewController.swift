@@ -1,5 +1,4 @@
 //
-//  ViewController.swift
 //  BRSC_Diary
 //
 //  Created by Nikita on 27.09.2019.
@@ -12,6 +11,7 @@ import KeychainSwift
 import Alamofire
 
 class ViewController: UIViewController, VCProtocol{
+    //инициализирую переменные
     let keychain = KeychainSwift()
     let settings = UserDefaults(suiteName: "settings")!
     
@@ -26,12 +26,14 @@ class ViewController: UIViewController, VCProtocol{
     @IBOutlet weak var previousWeek: RoundButton!
     
     @IBOutlet weak var refreshButton: RoundButton!
-    override func viewDidLoad() {
+    override func viewDidLoad() { //основная функция, запусткается сразу после загрузки View
         super.viewDidLoad()
+        //проверяю, заходил ли пользователь ранее. Если заходил - обновить и показзать данные
         if(settings.bool(forKey: "wasLogin")){
             updateAndShowData()
         }
      
+        //устанавливаю UITableView - список
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib.init(nibName: "DayCell", bundle: Bundle.main), forCellReuseIdentifier: "dayCell")
@@ -41,6 +43,7 @@ class ViewController: UIViewController, VCProtocol{
         
         self.settings.synchronize()
         
+        //если было сохранение данных дневника - показываю
         if(keychain.get("savedDays") != nil) {
             print(keychain.get("savedDays")!)
             days = try! JSONDecoder().decode([Day].self, from: keychain.get("savedDays")!.data(using: .utf8)!)
@@ -49,26 +52,28 @@ class ViewController: UIViewController, VCProtocol{
         }
     }
     
+    //если пользователь зашёл впервые - запускаю LoginViewController
     override func viewDidAppear(_ animated: Bool) {
              if(!settings.bool(forKey: "wasLogin")){
-                if let viewController = storyboard?.instantiateViewController(identifier: "LoginViewController") as? LoginViewController {
+                if let viewController = storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
                     viewController.modalPresentationStyle = .fullScreen
                     self.present(viewController, animated: true, completion: nil)
                 }
            }
     }
     
+    //функция получения данных с сервера и показа их пользователю
     func updateAndShowData(){
         progressBar.startAnimating()
+        //считываю из памяти данные пользователя
         let user = try! JSONDecoder().decode(Array<UserInfo>.self, from: keychain.get("ids")!.data(using: .utf8)!)[settings.integer(forKey: "prefId")]
         
-       // if Alamofire.Session.default.session.
-      //  Alamofire.Session.default.session.invalidateAndCancel()
+        //отправляю запрос на сервер, жду ответа асинхронно
         API.diary.get(login: keychain.get("login")!, password: keychain.get("password")!, id: user.userId!, rooId: user.rooId!, departmentId: user.departmentId!, instituteId: user.instituteId!, year: String(curYear), week: String(curWeek)).responseJSON(completionHandler: {
             response in
             do {
-                // print(String(data: response.data!, encoding: .utf8))
-                guard let data = response.data else {
+                //если пришёл пустой ответ - показываю пользователю ошибку
+                guard let data = response.data else{
                     DispatchQueue.main.async {
                               let alert = UIAlertController.init(title: "Ошибка", message: "Ошибка подключения", preferredStyle: .alert)
                                      alert.addAction(UIAlertAction.init(title: "Закрыть", style: .cancel, handler: {action in alert.dismiss(animated: true, completion: nil)}))
@@ -80,15 +85,16 @@ class ViewController: UIViewController, VCProtocol{
                     return
                 }
                 
+                //десериализую данные
                 let result = try JSONDecoder().decode([Day].self, from: response.data!)
                 
                
                 
                 DispatchQueue.main.async {
                     self.days = result
-                    
+                    //сохранаюсь
                     self.keychain.set(try! JSONEncoder().encode(result), forKey: "savedDays")
-                
+                    //отображаю изменения
                     self.tableView.reloadData()
                     self.progressBar.stopAnimating()
                     self.refreshButton.isHidden = false
@@ -96,7 +102,7 @@ class ViewController: UIViewController, VCProtocol{
                 
             } catch {
                 DispatchQueue.main.async {
-             let alert = UIAlertController.init(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+             let alert = UIAlertController.init(title: "Ошибка", message: "Ошибка подключения", preferredStyle: .alert)
                     alert.addAction(UIAlertAction.init(title: "Закрыть", style: .cancel, handler: {action in alert.dismiss(animated: true, completion: nil)}))
                     
                     self.show(alert, sender: nil)
@@ -105,6 +111,8 @@ class ViewController: UIViewController, VCProtocol{
         })
         //TODO: Year back and front support
     }
+    
+    //функция запроса и показа дневника за предыдущую неделю
     @IBAction func onPreviousWeekButtonClicked(_ sender: Any) {
         progressBar.startAnimating()
         refreshButton.isHidden = true
@@ -149,6 +157,8 @@ class ViewController: UIViewController, VCProtocol{
                   }
               })
     }
+    
+    //функция запроса и показа дневника за предыдущую неделю
     @IBAction func onNextWeekButtonClicked(_ sender: Any) {
         progressBar.startAnimating()
         refreshButton.isHidden = true
@@ -197,6 +207,7 @@ class ViewController: UIViewController, VCProtocol{
                })
     }
     
+    //функиция, рассчитывающая дату
     func calculateDate(isNext: Bool) {
         if(isNext){
             curWeek = curWeek + 1 == 52 ? 1 : curWeek + 1
@@ -207,6 +218,7 @@ class ViewController: UIViewController, VCProtocol{
         }
     }
     
+    //функция показа предупреждения
     func showToast(message : String, seconds: Double) {
          let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
          alert.view.backgroundColor = UIColor.black
@@ -221,6 +233,7 @@ class ViewController: UIViewController, VCProtocol{
          }
      }
     
+    //функция показа уведомления
     func showAlert(message: String) {
         let alert = UIAlertController.init(title: "Комментарий", message: message, preferredStyle: .actionSheet)
                
@@ -228,9 +241,12 @@ class ViewController: UIViewController, VCProtocol{
         self.show(alert, sender: nil)
     }
     
+    //технтческая функция
     func getVC() -> ViewController {
         return self
     }
+    
+    //функция принудительного обновления данных
     @IBAction func onRefreshButtonClicked(_ sender: Any) {
         self.refreshButton.isHidden = true
         updateAndShowData()
@@ -238,6 +254,7 @@ class ViewController: UIViewController, VCProtocol{
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource{
+    //настройки UITableView - списка
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return days.count
     }
@@ -253,4 +270,3 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     
     
 }
-

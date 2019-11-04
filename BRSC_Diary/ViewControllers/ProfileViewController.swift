@@ -57,8 +57,6 @@ class ProfileViewController: UIViewController {
         progressBar.startAnimating()
         initPerson()
 
-      //  Alamofire.Session.default.session.invalidateAndCancel()
-
                      API.balance.get(login: keychain.get("login")!, password: keychain.get("password")!).responseJSON(completionHandler: {
                          response in
                          do {
@@ -149,7 +147,7 @@ class ProfileViewController: UIViewController {
         keychain.clear()
         UserDefaults.standard.removePersistentDomain(forName: "settings")
         
-        let loginVC = storyboard!.instantiateViewController(identifier: "LoginViewController")
+        let loginVC = storyboard!.instantiateViewController(withIdentifier: "LoginViewController")
         
         loginVC.modalPresentationStyle = .fullScreen
         
